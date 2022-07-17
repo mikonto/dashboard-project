@@ -7,12 +7,11 @@ html, body {
     margin: 0; 
 }
 
-
 .container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
     grid-template-areas: "sidebar header"
     "sidebar main-content";
 }
@@ -22,41 +21,57 @@ html, body {
     background: #1992d4;
     color: white;
     display: grid;
-    grid-template-rows: 1fr 10fr;
+    grid-template-rows: 1fr 10fr; /* Container for logo and menu */
     grid-template-areas: "logo"
     "menu";
 }
 
 .logo {
     grid-area: logo;
+    display: grid;
+    grid-template-columns: auto 1fr; /* Container for icon and text "dashboard" */
+    gap: 20px;
+    align-items: center;
     margin: 20px;
+    font-size: x-large;
+    font-weight: bolder;
 }
 
 .menu {
     grid-area: menu;
-    margin: 20px;
+    margin: 30px;
 }
 
 .menu > ul {
     list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
+    padding: 0;
+    margin: 0;
     display: grid;
     grid-template-columns: auto 4fr;
     grid-template-rows: repeat(9, 1fr);
     gap: 20px;
+    font-size: larger;
+    font-weight: bold;
 }
 
-.menu ul li, .menu ul img{
+.menu > ul > img {
+    margin-right: 15px; /* Margin between menu icons and menu texts */
 }
 
 .header {
     grid-area: header;
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-search, .header-icons, .header-name, .header-buttons {
     border: 1px solid red;
 }
 
 .main-content {
     grid-area: main-content;
     border: 1px solid red;
-
+    background-color: #e1e7ef;
 }
