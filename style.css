@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body { 
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    padding: 0;
+    margin: 0; 
+}
+
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: "sidebar header"
+    "sidebar main-content";
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #1992d4;
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    grid-template-areas: "logo"
+    "menu";
+}
+
+.logo {
+    grid-area: logo;
+    margin: 20px;
+}
+
+.menu {
+    grid-area: menu;
+    margin: 20px;
+}
+
+.menu > ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    display: grid;
+    grid-template-columns: auto 4fr;
+    grid-template-rows: repeat(9, 1fr);
+    gap: 20px;
+}
+
+.menu ul li, .menu ul img{
+}
+
+.header {
+    grid-area: header;
+    border: 1px solid red;
+}
+
+.main-content {
+    grid-area: main-content;
+    border: 1px solid red;
+
+}
