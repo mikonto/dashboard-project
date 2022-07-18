@@ -14,6 +14,7 @@ html, body {
     grid-template-rows: 1fr 5fr;
     grid-template-areas: "sidebar header"
     "sidebar main-content";
+    border: 2px solid blue;
 }
 
 .sidebar {
@@ -65,7 +66,7 @@ html, body {
     grid-template-rows: 1fr 1fr;
 }
 
-.header-icons, .header-name, .header-buttons {
+.header-name, .header-buttons {
     border: 1px solid red;
 }
 
@@ -75,11 +76,11 @@ html, body {
 }
 
 .header-search form {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
     display: grid;
     grid-template-columns: auto 1fr;
-    align-content: center;
+    align-items: center;
     gap: 15px;
 }
 
@@ -93,6 +94,16 @@ html, body {
     background-color: #e2e8f0;
     padding: 8px;
     border-radius: 15px;
+}
+
+.header-icons {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    justify-content: end;
+    gap: 25px;
+    font-weight: bold;
+    margin-right: 50px;
 }
 
 .main-content {
