@@ -66,7 +66,7 @@ html, body {
     grid-template-rows: 1fr 1fr;
 }
 
-.header-name, .header-buttons {
+.header-buttons {
     border: 1px solid red;
 }
 
@@ -104,6 +104,30 @@ html, body {
     gap: 25px;
     font-weight: bold;
     margin-right: 50px;
+}
+
+.header-name { /* Container for avatar and "Hi there, Morgan.."-container */
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin: 0 50px 10px 50px;
+    align-content: center;
+    gap: 20px;
+}
+
+.header-name > div { /* Container for "Hi there, Morgan..." */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.header-name div div:nth-child(1) { /* Hi there.. */
+    align-self: end;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.header-name div:nth-child(2) { /* ..Morgan.. */
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .main-content {
