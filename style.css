@@ -60,14 +60,39 @@ html, body {
 
 .header {
     grid-area: header;
-    border: 1px solid red;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
 
-.header-search, .header-icons, .header-name, .header-buttons {
+.header-icons, .header-name, .header-buttons {
     border: 1px solid red;
+}
+
+.header-search {
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+
+.header-search form {
+    margin-left: 40px;
+    margin-right: 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-content: center;
+    gap: 15px;
+}
+
+.header-search form button {
+    border: none;
+    background-color: inherit;
+}
+
+.header-search form input {
+    border: none;
+    background-color: #e2e8f0;
+    padding: 8px;
+    border-radius: 15px;
 }
 
 .main-content {
