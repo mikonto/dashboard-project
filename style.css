@@ -44,6 +44,7 @@ html, body {
 
 .menu > ul {
     list-style-type: none; /* Remove bullets */
+    
     padding: 0;
     margin: 0;
     display: grid;
@@ -56,6 +57,11 @@ html, body {
 
 .menu > ul > img {
     margin-right: 15px; /* Margin between menu icons and menu texts */
+}
+
+.menu > ul a:link, .menu > ul a:visited, .menu > ul a:hover, .menu > ul a:active {
+    text-decoration: none;
+    color: white;
 }
 
 .header {
@@ -190,14 +196,15 @@ html, body {
 
 .projects-cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 375px);
+    /* grid-template-columns: repeat(auto-fit, 375px); */
     gap: 20px;
     /* justify-content: start; */
     align-content: start;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .projects-card {
-    aspect-ratio: 2.2;
     background-color: white;
     box-shadow: 5px 5px 4px -2px #ccc;
     border-radius: 10px;
