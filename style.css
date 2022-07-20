@@ -11,57 +11,9 @@ html, body {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 5fr;
+    /* grid-template-rows: 1fr 5fr; */
     grid-template-areas: "sidebar header"
     "sidebar main-content";
-}
-
-.sidebar {
-    grid-area: sidebar;
-    background: #1992d4;
-    color: white;
-    display: grid;
-    grid-template-rows: 1fr 10fr; /* Container for logo and menu */
-    grid-template-areas: "logo"
-    "menu";
-}
-
-.logo {
-    grid-area: logo;
-    display: grid;
-    grid-template-columns: auto 1fr; /* Container for icon and text "dashboard" */
-    gap: 20px;
-    align-items: center;
-    margin: 15px;
-    font-size: x-large;
-    font-weight: bolder;
-}
-
-.menu {
-    grid-area: menu;
-    margin: 25px;
-}
-
-.menu > ul {
-    list-style-type: none; /* Remove bullets */
-    
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: auto 4fr;
-    grid-template-rows: repeat(9, 1fr);
-    gap: 20px;
-    font-size: larger;
-    font-weight: bold;
-}
-
-.menu > ul > img {
-    margin-right: 15px; /* Margin between menu icons and menu texts */
-}
-
-.menu > ul a:link, .menu > ul a:visited, .menu > ul a:hover, .menu > ul a:active {
-    text-decoration: none;
-    color: white;
 }
 
 .header {
@@ -170,6 +122,42 @@ html, body {
   .header-buttons button:nth-child(3) {
     grid-area: button3;
   }
+
+.sidebar {
+    grid-area: sidebar;
+    background: #1992d4;
+    color: white;
+}
+
+.sidebar-title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    align-items: center;
+    margin: 20px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.user-features, .user-options {
+    margin: 30px;
+}
+
+.user-features {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.user-features > ul, 
+.user-options > ul {
+    list-style-type: none; /* Remove bullets */
+    font-size: larger;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap:15px;
+    padding: 0;
+    margin: 0;
+}
 
 .main-content {
     grid-area: main-content;
