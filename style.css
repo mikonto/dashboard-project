@@ -16,35 +16,29 @@ html, body {
     "sidebar main-content";
 }
 
+/* --------------------------------------------------------------------------------------- */
+
 .header {
     grid-area: header;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 5fr 2fr;
     grid-template-rows: 1fr 1fr;
+    grid-template-areas: "searchbar userinfo"
+    "greeting buttons";
     box-shadow: 0 5px 4px -2px #ccc;
     position: relative;
 }
 
-.header-search {
-    display: grid;
-    grid-template: 1fr / 1fr;
-}
-
-.header-search form {
-    margin-left: 50px;
-    margin-right: 50px;
+.searchbar {
+    grid-area: searchbar;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 15px;
+    padding-left: 50px;
 }
 
-.header-search form button {
-    border: none;
-    background-color: inherit;
-}
-
-.header-search form input {
+.searchbar > input {
     border: none;
     background-color: #e2e8f0;
     padding: 8px;
@@ -52,7 +46,8 @@ html, body {
     max-width: 700px;
 }
 
-.header-icons {
+.userinfo {
+    grid-area: userinfo;
     display: grid;
     grid-template-columns: repeat(3, auto);
     align-items: center;
@@ -62,66 +57,57 @@ html, body {
     margin-right: 50px;
 }
 
-.header-name { /* Container for avatar and "Hi there, Morgan.."-container */
+.greeting {
+    grid-area: greeting;
     display: grid;
     grid-template-columns: auto 1fr;
     margin: 0 0 10px 50px;
-    align-content: center;
-    gap: 20px;
-}
-
-.header-name > div { /* Container for "Hi there, Morgan..." */
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-
-.header-name div div:nth-child(1) { /* Hi there.. */
-    align-self: end;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
-.header-name div:nth-child(2) { /* ..Morgan.. */
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.header-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: ". button1 button2 button3";
     align-items: center;
-    justify-items:end;
-    margin-right: 40px;
     gap: 20px;
 }
 
-.header-buttons button {
+.user-greeting > p, .user-greeting > h3 {
+    margin: 0;
+}
+
+
+
+
+.nav {
+    grid-area: buttons;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: end;
+    margin-right: 50px;
+    gap: 20px;
+}
+
+.nav button {
     background-color: #1992d4;
     border: none;
     color: white;
     padding: 10px 28px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-weight: bold;
     font-size: 0.9rem;
-    cursor: pointer;
     border-radius: 25px;
-    width: 100px
+    width: 100px;
   }
 
-  .header-buttons button:nth-child(1) {
+/* 
+  .nav button:nth-child(1) {
     grid-area: button1;
   }
 
-  .header-buttons button:nth-child(2) {
+  .nav button:nth-child(2) {
     grid-area: button2;
   }
 
-  .header-buttons button:nth-child(3) {
+  .nav button:nth-child(3) {
     grid-area: button3;
-  }
+  } */
+
+/* --------------------------------------------------------------------------------------- */
 
 .sidebar {
     grid-area: sidebar;
